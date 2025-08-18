@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@keyframes blink {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.1; }
+}
+
+.animate-blink {
+    animation: blink 2s infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari */
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;   /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
