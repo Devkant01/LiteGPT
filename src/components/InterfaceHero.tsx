@@ -7,7 +7,7 @@ function Hero() {
   const [chatHistory, setMessage] = useRecoilState(messages);
 
   return (
-    <div className="w-xl md:w-3xl m-auto flex-1 overflow-y-auto no-scrollbar p-4">
+    <div className="min-w-sm md:w-3xl m-auto flex-1 overflow-y-auto no-scrollbar p-4">
       {chatHistory.length === 0 ? (
         <div className="w-fit m-auto relative top-2/5 text-3xl font-extrabold font-mono text-black opacity-60">
           Ask me anything..

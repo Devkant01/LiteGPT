@@ -43,7 +43,7 @@ export default function Composer() {
     }
 
     return (
-        <div className="p-4 w-xl md:w-3xl m-auto">
+        <div className="p-4 min-w-sm md:w-3xl m-auto">
             <div className="border rounded-full py-2 px-4 flex items-center">
                 <textarea
                     ref={textareaRef}
