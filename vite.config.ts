@@ -8,7 +8,4 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  css: {
-    transformer: "postcss", // 👈 disable lightningcss, fallback to PostCSS
-  },
 })
