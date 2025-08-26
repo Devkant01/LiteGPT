@@ -2,8 +2,8 @@ export default async function useFetchResponse(req: string) {
     const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${import.meta.env.VITE_API_KEY}`
+            "Authorization": `Bearer ${import.meta.env.VITE_API_KEY}`,
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             model: "openai/gpt-oss-20b:free",
@@ -28,7 +28,7 @@ export default async function useFetchResponse(req: string) {
         } else if (res.status === 503) {
             return "Service is currently unavailable. Please try again later.";
         }
-        return "Failed to fetch response: "+ res.type;
+        return "Failed to fetch response: "+ res.type; //when getting this error, create new one
     }
 
     const data = await res.json();
